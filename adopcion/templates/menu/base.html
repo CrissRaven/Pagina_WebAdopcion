@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopción de Mascotas</title>
+    <link rel="stylesheet" href="{% static 'tienda/styles.css' %}">
+    <script src="{% static 'tienda/script.js' %}" defer></script> <!-- Script para el slider -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'tienda/IMG/logo.jfif' %}" alt="Logo de Adopción de Mascotas">
+            <h1>Adopción de Mascotas</h1>
+        </div>
+        <nav>
+            <a href="/index">Inicio</a>
+            <a href="/#sobre-nosotros">Sobre Nosotros</a>
+            <a href="/carrito">Mascotas</a>
+            <a href="/login"><button class="login">Iniciar sesion</a>
+            <a href="/signup"><button class="register-btn">Registrarse</button></a>
+        </nav>
+    </header>
+    <!--bloque-->
+    {% block contenido%}
+    {% endblock %}
+
+    <!--footer-->
+    <footer>
+        <p>&copy; 2024 Adopción de Mascotas</p>
+    </footer>
+
+
+</body>
+</html>

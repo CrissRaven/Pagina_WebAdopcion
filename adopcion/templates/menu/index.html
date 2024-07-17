@@ -1,0 +1,52 @@
+{% extends 'menu/base.html' %}
+{% load static %}
+
+{% block contenido %}
+    <section id="inicio">
+        <h2>Bienvenidos a Adopción de Mascotas</h2>
+        <p>Encuentra a tu nuevo mejor amigo hoy mismo.</p>
+    </section>
+    <!-- Slider -->
+    <section id="slider">
+       {% for a in animal %}
+        <div class="slider-container">
+            <div class="slide">
+                <a href="/carrito">
+                <img src="{{a.imagen.url}}" alt="Perro 1">
+                </a>
+                <h3>{{a.nombre}}</h3>
+                <p>{{a.edad}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+    <section id="sobre-nosotros">
+        <div class="wrapper">
+        <img src="{% static 'tienda/IMG/Familia.jpg' %}" alt="">
+        <div class="text-box">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una organización dedicada a encontrar hogares para mascotas sin hogar.
+                <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi<br> ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur<br>
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et<br> dolore magna aliqua. Ut enim ad 
+                    minim veniam, quis nostrud <br>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute <br>irure dolor in reprehenderit in voluptate velit esse cillum <br>dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident,<br> sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        </div>
+    </section>
+    <section id="contacto">
+        <h2>Contactos</h2>
+        <p>Para más información, contáctanos a través de nuestras redes sociales o envíanos un mensaje.
+            <br>adopciones@gmail.com
+            <br>Facebook
+            <br>Instagram
+            <br>Twitter
+
+        </p>
+    </section>
+{% endblock %}
+
+

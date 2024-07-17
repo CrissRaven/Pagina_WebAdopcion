@@ -1,0 +1,40 @@
+{% extends 'menu/base.html' %}
+{% load static %}
+
+{% block contenido %}
+    <main>
+        <section id="productos">
+            <h2>Mascotas Disponibles</h2>
+            <div class="producto">
+                <img src="{% static 'tienda/IMG/fotos-mascotas-1.jpg' %}" alt="Mascota 1">
+                <h2>Mascota 1</h2>
+                <p>Edad: 2 años</p>
+                <button onclick="agregarAlCarrito('Mascota 1', '2 años')">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="{% static 'tienda/IMG/cachorro1.jpg' %}" alt="Mascota 2">
+                <h2>Mascota 2</h2>
+                <p>Edad: 1 año</p>
+                <button onclick="agregarAlCarrito('Mascota 2', '1 año')">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="{% static 'tienda/IMG/perro.jpg' %}" alt="Mascota 3">
+                <h2>Mascota 3</h2>
+                <p>Edad: 3 años</p>
+                <button onclick="agregarAlCarrito('Mascota 3', '3 años')">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="{% static 'tienda/IMG/perrito.jpg' %}" alt="Mascota 4">
+                <h2>Mascota 4</h2>
+                <p>Edad: 6 meses</p>
+                <button onclick="agregarAlCarrito('Mascota 4', '6 meses')">Agregar al carrito</button>
+            </div>
+        </section>
+        <section id="carrito">
+            <h2>Carrito</h2>
+            <ul id="lista-carrito"></ul>
+            <button id="vaciar-carrito" onclick="vaciarCarrito()">Vaciar Carrito</button>
+            <button onclick="confirmarAdopcion()">Confirmar Adopción</button> 
+        </section>
+    </main>
+{% endblock %}
